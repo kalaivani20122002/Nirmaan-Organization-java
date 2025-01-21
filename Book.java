@@ -1,19 +1,10 @@
-package Day14;
+package Day15;
 
 public class Book {
-	private int id;
-	private String name;
-	private String author;
-	private String price;
-	public Book() {
-		
-	}
-	public Book(int id, String name, String author, String price) {
-		this.id = id;
-		this.name = name;
-		this.author = author;
-		this.price = price;
-	}
+	int id;
+	String name;
+	String author;
+	double price;
 	public int getId() {
 		return id;
 	}
@@ -32,16 +23,25 @@ public class Book {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public String getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(double price) {
 		this.price = price;
+	}
+	public Book(int id, String name, String author, double price) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.author = author;
+		this.price = price;
+	}
+	public Book() {
+		
 	}
 	@Override
 	public String toString() {
-		return "Id:"+id+"\nName:"+name+"\nAuthor:"+author+"\nPrice: "+price;
+		return "Book [id=" + id + ", name=" + name + ", author=" + author + ", price=" + price + "]";
 	}
-	
 
 }
